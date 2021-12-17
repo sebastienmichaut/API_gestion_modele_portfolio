@@ -1,0 +1,231 @@
+
+#planning {
+    display: flex;
+    height: 125vh;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 10px;
+}
+.container-start{
+    /*display: flex;
+    justify-content: center;
+    align-self: center;
+    position: relative;*/
+    max-width: 800px;
+    width: 100%;
+    background: #fff;
+    /*padding: 25px 30px;*/
+    border-radius: 8px;
+    margin: 0 0px 10px 0px;
+}
+.container-start .item{
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 10px 0 6px 0;
+}
+.container-start .item.title{
+    justify-content: center;
+    align-self: flex-start;
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+/*.container-start .item.title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 80px;
+    background: linear-gradient(135deg,#71b7e6, #70ffa0);
+}*/
+
+.container-start .item span{
+    font-weight: 500;
+}
+.container-start .item.ma{
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.container-start a{
+    color: white;
+    text-decoration: none;
+}
+.container-start button{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg,#71b7e6, #70ffa0);
+    margin: 0 20% 10px 20%;
+}
+.container-start button:hover{
+    background: linear-gradient(-135deg,#71b7e6, #70ffa0);
+}
+.container-calendar{
+    /*display: flex;
+    justify-content: center;*/
+    max-width: 1000px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    padding: 5px 7px;
+    border-radius: 8px 8px 0px 0px ;
+}
+.titre-h{
+    font-weight: 500;
+    font-size: 25px;
+    text-align: center;
+}
+.container-calendar .semaine{
+    background: rgb(255, 255, 255);
+    margin: 0 10px;
+}
+.container-calendar .jour{
+    display: flex;
+    align-items: space-around;
+    flex-flow: column wrap;
+    width: 140px;
+    margin: 0 0px 0 0px;
+    background-color: rgb(255, 255, 255);
+}
+.container-calendar .jour span{
+    font-weight: 500;
+    text-align: center;
+}
+.container-calendar .creneau{
+    display: flex;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    border: #ff1c7b solid 0px;
+    border-radius: 4px;
+}
+.container-calendar .creneau input[type="radio"].horaire{
+    display: none;
+}
+.container-calendar .creneau input[type="radio"].horaire + label{
+    padding: 8px 18px;
+    margin: 2px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+}
+.container-calendar .creneau input[type="radio"].horaire:hover + label{
+    background: linear-gradient(-135deg,#71b7e6, #70ffa0);
+}
+.container-calendar .creneau input[type="radio"].horaire:disabled + label{
+    border: 1px dashed #ccc;
+    background-color: rgb(190, 190, 190);
+}
+.container-calendar .creneau input[type="radio"].horaire:disabled:hover + label{
+    background: rgb(190, 190, 190);
+}
+.container-calendar .creneau input[type="radio"].horaire:checked + label{
+    border: 1px solid #000;
+    background-color: linear-gradient(-135deg,#71b7e6, #70ffa0);
+}
+.container-form .valider{
+ justify-content: center;   
+}
+.container-end{
+    width: 100%;
+    background: rgb(255, 255, 255);
+    padding: 25px 30px;
+    border-radius: 0px 0px 0px 0px;
+}
+.changep{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.container-end .changep button[type="button"].presui{    
+    display: none;
+}
+.container-end .changep button[type="button"].presui + label{
+    width: 8rem;
+    text-align: center;
+    padding: 8px 18px;
+    margin: 0px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+}
+.container-end .changep button[type="button"].presui:hover + label{
+    background: linear-gradient(-135deg,#71b7e6, #70ffa0);
+}
+.container-end .changep button[type="button"].day + label{
+    display: none;
+}
+.container-end .changep button[type="button"].precW + label{
+    border-width: 1px 1px 1px 1px;
+    border-radius: 4px 0 0 4px;
+}
+.container-end .changep button[type="button"].suivW + label{
+    border-width: 1px 1px 1px 0px;
+    border-radius: 0px 4px 4px 0px;
+}
+.submitbut{
+    width: 100%;
+    height: 70px;
+    background: rgb(255, 255, 255);
+    padding: 5px 30px 25px 30px;
+    border-radius: 0px 0px 8px 8px;
+    text-align: center;
+    
+}
+.submitbut input{
+    height: 100%;
+    width: 66%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 23px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg,#71b7e6, #70ffa0);
+    margin: 0 20px 0 20px;
+}
+.submitbut input:hover{
+    background: linear-gradient(-135deg,#71b7e6, #70ffa0);
+}
+#calendar #semaine{
+    display:none;
+}
+#calendar #semaine:first-child{
+    display:flex;
+}
+@media (max-width: 1025px){
+    #semaine #jour{
+        display: none;
+    }
+    #calendar #semaine:first-child #jour:first-child{
+        display: flex;
+    }
+    .container-calendar{
+        max-width: 800px;
+    }
+    .container-calendar .semaine{
+        justify-content: center;
+    }
+    .container-end .changep button[type="button"].day + label{
+        display: block;
+
+    }
+    .container-end .changep button[type="button"].precD + label{
+        border-width: 1px 1px 1px 0px;
+        border-radius: 0;
+    }
+    .container-end .changep button[type="button"].suivD + label{
+        border-width: 1px 1px 1px 0px;
+        border-radius: 0;
+    }
+}

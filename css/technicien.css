@@ -1,0 +1,80 @@
+#logo{
+    max-width: 3em;
+    max-height: 3em;
+}
+
+.jaune1{
+    background-color: #F8EFBA;
+    border-top: 3px ridge lightgrey;
+    border-right: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    border-left: 3px ridge lightgrey;
+}
+
+.jaune2{
+    background-color: #F8EFBA;
+    border-top: 2px ridge #a5a5a5;
+    border-right: 3px ridge #f8f8f8;
+    border-bottom: 3px ridge #f8f8f8;
+    border-left: 2px ridge #a5a5a5;
+}
+
+.blanc{
+    background-color: white;
+    border-top: 2px ridge #a5a5a5;
+    border-right: 3px ridge #f8f8f8;
+    border-bottom: 3px ridge #f8f8f8;
+    border-left: 2px ridge #a5a5a5;
+}
+
+.bleu{
+    background-color: #c7ecee;
+    border-top: 2px ridge #a5a5a5;
+    border-right: 3px ridge #f8f8f8;
+    border-bottom: 3px ridge #f8f8f8;
+    border-left: 2px ridge #a5a5a5;
+}
+
+.vert{
+    background-color: #7bed9f;
+}
+
+.orange{
+    background-color: #f8c291;
+    border-top: 2px ridge #a5a5a5;
+    border-right: 3px ridge #f8f8f8;
+    border-bottom: 3px ridge #f8f8f8;
+    border-left: 2px ridge #a5a5a5;
+}
+
+.rouge{
+    background-color: #EA2027;
+    border-top: 2px ridge #a5a5a5;
+    border-right: 3px ridge #f8f8f8;
+    border-bottom: 3px ridge #f8f8f8;
+    border-left: 2px ridge #a5a5a5;    
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#explication{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+@media only screen and (min-width: 600px) {
+    #mode{
+        margin-left: 5%;
+    }
+    
+}
