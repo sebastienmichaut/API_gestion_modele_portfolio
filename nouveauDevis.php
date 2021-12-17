@@ -18,9 +18,9 @@ include "script_calcul_prix.php"; // pour utiliser les fonctions de calcul du pr
             $idDevis_devis = $rdv_technicien["id_devis"];
             $nomClient_client = htmlspecialchars($_POST["nom_client"]);
             $prenomClient_client = htmlspecialchars($_POST["prenom_client"]);
-            $adresseRueClient_client = htmlspecialchars($_POST["adresse_rue_client"]);
-            $adresseCpClient_client = htmlspecialchars($_POST["adresse_CP_client"]);
-            $adresseVilleClient_client = htmlspecialchars($_POST["adresse_ville_client"]);
+            $adresseRueRDV_gestion_rdv = htmlspecialchars($_POST["adresse_rue_rdv_gestion_rdv"]);
+            $adresseCpRDV_gestion_rdv = htmlspecialchars($_POST["adresse_CP_rdv_gestion_rdv"]);
+            $adresseVilleRDV_gestion_rdv = htmlspecialchars($_POST["lieu_rdv_gestion_rdv"]);
             $locauxDevis_devis = htmlspecialchars($_POST["locaux_devis"]);
             $nbPiecesDevis_devis = htmlspecialchars($_POST["nb_pieces_devis"]);
             $surfaceDevis_devis = htmlspecialchars($_POST["surface_devis"]);
@@ -59,17 +59,24 @@ include "script_calcul_prix.php"; // pour utiliser les fonctions de calcul du pr
     
             $req = $pdo->prepare("UPDATE `t_clients` SET
                 nom_client = :nomClient_client,
-                prenom_client = :prenomClient_client,
-                adresse_rue_client = :adresseRueClient_client,
-                adresse_CP_client = :adresseCpClient_client,
-                adresse_ville_client = :adresseVilleClient_client WHERE id_client = :idClient_client");
+                prenom_client = :prenomClient_client
+                WHERE id_client = :idClient_client");
             $req->bindValue(":nomClient_client", $nomClient_client, PDO::PARAM_STR);
             $req->bindValue(":prenomClient_client", $prenomClient_client, PDO::PARAM_STR);
-            $req->bindValue(":adresseRueClient_client", $adresseRueClient_client, PDO::PARAM_STR);
-            $req->bindValue(":adresseCpClient_client", $adresseCpClient_client, PDO::PARAM_STR);
-            $req->bindValue(":adresseVilleClient_client", $adresseVilleClient_client, PDO::PARAM_STR);
             $req->bindValue(":idClient_client", $idClient_client, PDO::PARAM_INT);
             $req->execute();
+
+            $req = $pdo->prepare("UPDATE `t_gestion_rdv` SET
+                adresse_rue_rdv_gestion_rdv = :adresseRueRDV_gestion_rdv,
+                adresse_CP_rdv_gestion_rdv = :adresseCpRDV_gestion_rdv,
+                lieu_rdv_gestion_rdv = :adresseVilleRDV_gestion_rdv
+                WHERE id_rdv = :id_rdv");
+            $req->bindValue(":adresseRueRDV_gestion_rdv", $adresseRueRDV_gestion_rdv, PDO::PARAM_STR);
+            $req->bindValue(":adresseCpRDV_gestion_rdv", $adresseCpRDV_gestion_rdv, PDO::PARAM_STR);
+            $req->bindValue(":adresseVilleRDV_gestion_rdv", $adresseVilleRDV_gestion_rdv, PDO::PARAM_STR);
+            $req->bindValue(":id_rdv", $_GET['id_rdv'], PDO::PARAM_INT);
+            $req->execute();
+
             echo "<script>window.location.href='compteRenduIntervention1.php?id_rdv={$rdv_technicien['id_rdv']}'</script>";
             Database::disconnect();        
         }
@@ -100,9 +107,9 @@ include "script_calcul_prix.php"; // pour utiliser les fonctions de calcul du pr
                     <label for="adresse" class="col-form-label">Adresse du RDV :</label>
                 </div>
                 <div class="col-sm-8">
-                    <input type="text" id="adresse" name="adresse_rue_client" class="form-control" value="<?=$rdv_technicien['adresse_rue_client'] ?>" onFocus="this.value='';">   
-                    <input type="text" id="adresse" name="adresse_CP_client" class="form-control" value="<?= $rdv_technicien['adresse_CP_client'] ?>" onFocus="this.value='';"> 
-                    <input type="text" id="adresse" name="adresse_ville_client" class="form-control" value="<?= $rdv_technicien['adresse_ville_client'] ?>" onFocus="this.value='';">
+                    <input type="text" id="adresse" name="adresse_rue_rdv_gestion_rdv" class="form-control" value="<?=$rdv_technicien['adresse_rue_rdv_gestion_rdv'] ?>" onFocus="this.value='';">   
+                    <input type="text" id="adresse" name="adresse_CP_rdv_gestion_rdv" class="form-control" value="<?= $rdv_technicien['adresse_CP_rdv_gestion_rdv'] ?>" onFocus="this.value='';"> 
+                    <input type="text" id="adresse" name="lieu_rdv_gestion_rdv" class="form-control" value="<?= $rdv_technicien['lieu_rdv_gestion_rdv'] ?>" onFocus="this.value='';">
                 </div>
                 <div class="col-sm-4">
                     <label for="nom_client" class="col-form-label">Nom :</label>

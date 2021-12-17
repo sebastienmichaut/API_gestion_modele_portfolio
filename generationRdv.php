@@ -21,7 +21,7 @@ if ($_POST){
             $today = time();
             $time = $today;
             for ($i=0; $i < sizeof($data); $i++) { 
-                if ($i<4){
+                if ($i<6){
                     $time += 172800;
                     $date[$i][0] = date('Y/m/d',$time);
                     $data[$i][0] = $date[$i][0];

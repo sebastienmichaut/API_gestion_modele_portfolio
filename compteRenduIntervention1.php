@@ -29,9 +29,9 @@ session_start();  // Démarrage de la session pour avoir accès à '$_SESSION'
         
           <dt class="col-sm-4">Adresse du RDV :</dt>
           <dd class="col-sm-8 mt-1">
-            <p class="px-2 jaune1"><?=$rdv_technicien['adresse_rue_client'] ?></p>
-            <p class="px-2 jaune1"><?= $rdv_technicien['adresse_CP_client'] ?></p>
-            <p class="px-2 jaune1"><?= $rdv_technicien['adresse_ville_client'] ?></p>
+            <p class="px-2 jaune1"><?=$rdv_technicien['adresse_rue_rdv_gestion_rdv'] ?></p>
+            <p class="px-2 jaune1"><?= $rdv_technicien['adresse_CP_rdv_gestion_rdv'] ?></p>
+            <p class="px-2 jaune1"><?= $rdv_technicien['lieu_rdv_gestion_rdv'] ?></p>
           </dd>
         
           <dt class="col-sm-4">Nom :</dt>

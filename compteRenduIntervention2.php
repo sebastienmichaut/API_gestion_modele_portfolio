@@ -29,7 +29,7 @@ session_start();  // Démarrage de la session pour avoir accès à '$_SESSION'
                         <dt class="col-sm-4">Nature du traitement :</dt>
                         <dd class="col-sm-8 jaune1"><?= $facture_facture['nature_traitement_devis'] ?></dd>
                         
-                        <dt class="col-sm-4">Adresse du RDV :</dt>
+                        <dt class="col-sm-4">Adresse du client :</dt>
                         <dd class="col-sm-8 mt-1">
                             <p class="px-2 jaune1"><?=$facture_facture['adresse_rue_client'] ?></p>
                             <p class="px-2 jaune1"><?= $facture_facture['adresse_CP_client'] ?></p>
