@@ -13,7 +13,7 @@ echo "Nous sommes le " . date('d/m/Y') . " et il est " . date('H:i');
         Cette application est responsive design car elle sera principalement utilisé sur smartphone.</br>
         Afin d'éviter le rechargement des pages et accélerer la fluidité sur mobile, certaines d'entre elles ont des traitements asynchrones (AJAX) avec des modifications du DOM.</br>
         J'ai retirée certaines pages afin de garder la confidentialité du projet.</br> 
-        Lorsque vous quittez l'application (bouton déconnexion), aucune donnée ne sera stockée.</br>
+        <span>ATTENTION : N'indiquez pas de vraies informations personnelles !</span></br>
     </p>
     <div id="mode">
         <h4>Comment utiliser l'application :</h4>
@@ -29,7 +29,6 @@ echo "Nous sommes le " . date('d/m/Y') . " et il est " . date('H:i');
                 </ul>
         </ol>
     </div>
-   
 </div>
 <div class="d-grid gap-2 col-4 mx-auto my-6">
   <button id="genererRdv" class="btn btn-primary" type="submit">Générer des rendez-vous</button>

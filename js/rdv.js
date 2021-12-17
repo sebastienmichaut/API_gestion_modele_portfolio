@@ -9,12 +9,12 @@ $(document).ready(function () {
       "generationRdv.php",
       data,
       function (response){
-        $("#genererRdv").after(response);
-        /*if (response == "ok") {
+        /*$("#genererRdv").after(response);*/
+        if (response == "ok") {
           $("#genererRdv").html("<span>Bravo, vos rendez-vous sont dans le planning. Au travail !</span>");
         } else if (response == "erreur"){
           $("#genererRdv").html("<span class='text-danger'><b>Une erreur est survenue</b></span>");
-        }*/
+        }
       },
       "text"
     );

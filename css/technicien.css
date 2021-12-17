@@ -76,5 +76,10 @@ input[type=number] {
     #mode{
         margin-left: 5%;
     }
+
+#explication>p>span{
+    color: #EA2027;
+    font-weight: bold;
+}
     
 }
